@@ -1,0 +1,1 @@
+SERVICE_URL = "http://www.boredapi.com/api/activity"
