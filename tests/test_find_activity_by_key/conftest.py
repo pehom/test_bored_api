@@ -5,10 +5,9 @@ from src.base_classes.response import Response
 
 
 @pytest.fixture
-def get_random_activity_by_existing_key():
-    key = '1000000'
+def get_random_activity_by_key(key):
     url = f'{SERVICE_URL}?key={key}'
     resp = Response(requests.get(url))
     print(f'\n\t {url=}')
     print('\n\t response: ', resp.value.json())
-    return resp.value.json()['key']
+    return resp
